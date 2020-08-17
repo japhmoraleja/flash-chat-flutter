@@ -41,7 +41,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.0),
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -89,34 +89,6 @@ class FlashChatHeaderText extends StatelessWidget {
   }
 }
 
-class RegisterButton extends StatelessWidget {
-  const RegisterButton({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
-      child: Material(
-        color: Colors.blueAccent,
-        borderRadius: BorderRadius.circular(30.0),
-        elevation: 5.0,
-        child: MaterialButton(
-          onPressed: () {
-            Navigator.pushNamed(context, RegistrationScreen.id);
-          },
-          minWidth: 200.0,
-          height: 42.0,
-          child: Text(
-            'Register',
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class LogInButton extends StatelessWidget {
   const LogInButton({
     Key key,
@@ -139,6 +111,40 @@ class LogInButton extends StatelessWidget {
           child: Text(
             'Log In',
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class RegisterButton extends StatelessWidget {
+  const RegisterButton({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 16.0),
+      child: Material(
+        color: Colors.blueAccent,
+        borderRadius: BorderRadius.circular(30.0),
+        elevation: 5.0,
+        child: MaterialButton(
+          onPressed: () {
+            Navigator.pushNamed(context, RegistrationScreen.id);
+          },
+          minWidth: 200.0,
+          height: 42.0,
+          child: InkWell(
+            highlightColor: Color(0xFF152E5A),
+            child: Text(
+              'Register',
+            ),
+          ),
+          // child: Text(
+          //   'Register',
+          // ),
         ),
       ),
     );
