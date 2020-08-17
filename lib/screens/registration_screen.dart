@@ -34,6 +34,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               },
               decoration: InputDecoration(
                 hintText: 'Enter your email',
+                hintStyle: TextStyle(color: Colors.black38),
                 contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
@@ -57,6 +58,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               },
               decoration: InputDecoration(
                 hintText: 'Enter your password',
+                hintStyle: TextStyle(color: Colors.black38),
                 contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
