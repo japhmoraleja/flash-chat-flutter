@@ -60,9 +60,3 @@ class FlashChat extends StatelessWidget {
     );
   }
 }
-
-class PageTransitions extends FlashChat {
-  Widget build(BuildContext context) {
-    return MaterialApp();
-  }
-}

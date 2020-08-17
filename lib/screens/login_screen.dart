@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flash_chat/utils/text_helpers.dart';
+import 'package:flash_chat/utils/constants.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = 'login_screen';
@@ -28,54 +30,30 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: 48.0,
             ),
-            TextField(
+            // * Email field
+            TextFormField(
               onChanged: (value) {
                 //Do something with the user input.
               },
-              decoration: InputDecoration(
-                hintText: 'Enter your email',
-                hintStyle: TextStyle(color: Colors.black38),
-                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.lightBlueAccent, width: 1.0),
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.lightBlueAccent, width: 2.0),
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-              ),
+              validator: (val) => Validators.validateEmail(val),
+              style: TextStyle(color: Colors.blue),
+              decoration: kEmailBox,
             ),
             SizedBox(
               height: 8.0,
             ),
-            TextField(
+            // * Password Field
+            TextFormField(
               onChanged: (value) {
                 //Do something with the user input.
               },
-              decoration: InputDecoration(
-                hintText: 'Enter your password.',
-                hintStyle: TextStyle(color: Colors.black38),
-                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.lightBlueAccent, width: 1.0),
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.lightBlueAccent, width: 2.0),
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-              ),
+              style: TextStyle(color: Colors.blue),
+              decoration: kPasswordBox,
             ),
             SizedBox(
               height: 24.0,
             ),
+
             Padding(
               padding: EdgeInsets.symmetric(vertical: 16.0),
               child: Material(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
-import 'registration_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flash_chat/components/buttons.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen';
@@ -49,7 +48,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
             FlashChatHeaderText(),
             SizedBox(height: 48.0),
             LogInButton(),
-            RegisterButton(),
+            RegistrationButton(),
           ],
         ),
       ),
@@ -85,68 +84,6 @@ class FlashChatHeaderText extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class LogInButton extends StatelessWidget {
-  const LogInButton({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
-      child: Material(
-        elevation: 5.0,
-        color: Colors.lightBlueAccent,
-        borderRadius: BorderRadius.circular(30.0),
-        child: MaterialButton(
-          onPressed: () {
-            Navigator.pushNamed(context, LoginScreen.id);
-          },
-          minWidth: 200.0,
-          height: 42.0,
-          child: Text(
-            'Log In',
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class RegisterButton extends StatelessWidget {
-  const RegisterButton({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
-      child: Material(
-        color: Colors.blueAccent,
-        borderRadius: BorderRadius.circular(30.0),
-        elevation: 5.0,
-        child: MaterialButton(
-          onPressed: () {
-            Navigator.pushNamed(context, RegistrationScreen.id);
-          },
-          minWidth: 200.0,
-          height: 42.0,
-          child: InkWell(
-            highlightColor: Color(0xFF152E5A),
-            child: Text(
-              'Register',
-            ),
-          ),
-          // child: Text(
-          //   'Register',
-          // ),
-        ),
-      ),
     );
   }
 }
