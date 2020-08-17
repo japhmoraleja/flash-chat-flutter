@@ -20,7 +20,6 @@ class FlashChat extends StatelessWidget {
         ),
       ),
       home: WelcomeScreen(),
-
       onGenerateRoute: (route) {
         switch (route.name) {
           case WelcomeScreen.id:
@@ -51,7 +50,6 @@ class FlashChat extends StatelessWidget {
             return null;
         }
       },
-
       // initialRoute: WelcomeScreen.id,
       // routes: {
       //   WelcomeScreen.id: (context) => WelcomeScreen(),
@@ -60,5 +58,11 @@ class FlashChat extends StatelessWidget {
       //   ChatScreen.id: (context) => ChatScreen(),
       // },
     );
+  }
+}
+
+class PageTransitions extends FlashChat {
+  Widget build(BuildContext context) {
+    return MaterialApp();
   }
 }
