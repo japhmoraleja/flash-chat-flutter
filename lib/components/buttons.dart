@@ -5,41 +5,10 @@ import 'package:flash_chat/screens/registration_screen.dart';
 // ********************************************************************* //
 // *                                                                   * //
 // *                                                                   * //
-// *                           Menu Button                             * //
+// *                           Menu Buttons                            * //
 // *                                                                   * //
 // *                                                                   * //
 // ********************************************************************* //
-
-// class MenuButton extends StatelessWidget {
-//   const MenuButton(
-//       {@required this.buttonColor, @required this.buttonText, @required this.onPressed});
-
-//   final Color buttonColor;
-//   final String buttonText;
-//   final Function onPressed;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: EdgeInsets.symmetric(vertical: 16.0),
-//       child: Material(
-//         elevation: 5.0,
-// color: buttonColor,
-// color: Colors.lightBlueAccent,
-//         borderRadius: BorderRadius.circular(30.0),
-//         child: MaterialButton(
-// onPressed: () {
-//   Navigator.pushNamed(context, LoginScreen.id);
-// },
-//           onPressed: onPressed,
-//           minWidth: 200.0,
-//           height: 42.0,
-//           child: Text(buttonText),
-//         ),
-//       ),
-//     );
-//   }
-// }
 
 class LogInButton extends StatelessWidget {
   const LogInButton({
@@ -62,6 +31,7 @@ class LogInButton extends StatelessWidget {
           height: 42.0,
           child: Text(
             'Log In',
+            style: TextStyle(color: Colors.white),
           ),
         ),
       ),
@@ -92,6 +62,7 @@ class RegistrationButton extends StatelessWidget {
             highlightColor: Color(0xFF152E5A),
             child: Text(
               'Register',
+              style: TextStyle(color: Colors.white),
             ),
           ),
           // child: Text(
@@ -132,6 +103,43 @@ class RegisterButton extends StatelessWidget {
           height: 42.0,
           child: Text(
             'Register',
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ********************************************************************* //
+// *                                                                   * //
+// *                                                                   * //
+// *                           Login Button                            * //
+// *                                                                   * //
+// *                                                                   * //
+// ********************************************************************* //
+
+class LogInScreenButton extends StatelessWidget {
+  const LogInScreenButton({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 16.0),
+      child: Material(
+        color: Colors.lightBlueAccent,
+        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+        elevation: 5.0,
+        child: MaterialButton(
+          onPressed: () {
+            //Implement login functionality.
+          },
+          minWidth: 200.0,
+          height: 42.0,
+          child: Text(
+            'Log In',
             style: TextStyle(color: Colors.white),
           ),
         ),
