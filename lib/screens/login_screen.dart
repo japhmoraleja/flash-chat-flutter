@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
               },
               validator: (val) => Validators.validateEmail(val),
               style: TextStyle(color: Colors.blue),
-              decoration: kEmailBox,
+              decoration: kLoginRegisterFormField.copyWith(hintText: 'Enter your email'),
             ),
             SizedBox(
               height: 8.0,
@@ -48,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 //Do something with the user input.
               },
               style: TextStyle(color: Colors.blue),
-              decoration: kPasswordBox,
+              decoration: kLoginRegisterFormField.copyWith(hintText: 'Enter your password'),
             ),
             SizedBox(
               height: 24.0,

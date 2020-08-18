@@ -36,7 +36,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 onChanged: (value) {
                   //Do something with the user input.
                 },
-                decoration: kEmailBox,
+                decoration: kLoginRegisterFormField.copyWith(hintText: 'Enter your email'),
                 validator: (val) => Validators.validateEmail(val)),
             SizedBox(
               height: 8.0,
@@ -46,7 +46,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               onChanged: (value) {
                 //Do something with the user input.
               },
-              decoration: kPasswordBox,
+              decoration: kLoginRegisterFormField.copyWith(hintText: 'Enter your password'),
             ),
             SizedBox(
               height: 24.0,
